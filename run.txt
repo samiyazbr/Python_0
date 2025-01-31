@@ -1,2 +1,0 @@
-docker build -t python_0 . - build docker image
-docker run -it --rm -v $(pwd):/app python_0 - Run container

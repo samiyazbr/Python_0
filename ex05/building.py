@@ -1,13 +1,12 @@
 import sys
 import string
 
+
 def analyze_text(text: str):
     """
     Analyzes the text and counts different types of characters.
-    
     Args:
         text (str): The input string to analyze.
-    
     Returns:
         dict: A dictionary containing counts of character types.
     """
@@ -21,10 +20,10 @@ def analyze_text(text: str):
     }
     return analysis
 
+
 def display_analysis(analysis: dict):
     """
     Prints the analysis results in the required format.
-    
     Args:
         analysis (dict): The analysis result from analyze_text.
     """
@@ -35,6 +34,7 @@ def display_analysis(analysis: dict):
     print(f"{analysis['spaces']} spaces")
     print(f"{analysis['digits']} digits")
 
+
 def main():
     """
     Main function to handle input, validate arguments, and display results.
@@ -42,21 +42,20 @@ def main():
     try:
         if len(sys.argv) > 2:
             raise AssertionError("more than one argument is provided")
-        
-        # Handle input
+
         if len(sys.argv) == 2:
             text = sys.argv[1]
         else:
             text = input("What is the text to count?\n")
-        
-        # Analyze and display results
+
         analysis = analyze_text(text)
         display_analysis(analysis)
-    
+
     except AssertionError as e:
         print(f"AssertionError: {e}")
     except Exception as e:
         print(f"An unexpected error occurred: {e}")
+
 
 if __name__ == "__main__":
     main()

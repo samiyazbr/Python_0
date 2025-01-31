@@ -1,12 +1,14 @@
 import sys
 from ft_filter import ft_filter
 
+
 def main():
     """Main function to validate arguments and filter words."""
     try:
         # Ensure exactly two arguments are passed
         if len(sys.argv) != 3:
-            raise AssertionError("AssertionError: the arguments are bad")
+            raise AssertionError("AssertionError: the arguments \
+are bad")
 
         S, N = sys.argv[1], sys.argv[2]
 
@@ -24,6 +26,7 @@ def main():
 
     except AssertionError as e:
         print(e)
+
 
 if __name__ == "__main__":
     main()

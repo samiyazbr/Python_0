@@ -7,7 +7,8 @@ def ft_filter(function, iterable):
         iterable: An iterable (list, tuple, etc.) to filter.
 
     Returns:
-        A generator with elements from iterable for which function returns True.
+        A generator with elements from iterable for which function returns
+        True.
     """
     if function is None:
         return (item for item in iterable if item)
