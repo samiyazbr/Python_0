@@ -14,7 +14,8 @@ def analyze_text(text: str):
         "total_characters": len(text),
         "upper_letters": sum(1 for char in text if char.isupper()),
         "lower_letters": sum(1 for char in text if char.islower()),
-        "punctuation_marks": sum(1 for char in text if char in string.punctuation),
+        "punctuation_marks": sum(
+            1 for char in text if char in string.punctuation),
         "spaces": sum(1 for char in text if char.isspace()),
         "digits": sum(1 for char in text if char.isdigit()),
     }
