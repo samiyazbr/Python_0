@@ -2,10 +2,11 @@ import sys
 import time
 import shutil
 
+
 def ft_tqdm(lst: range):
     """
     A custom implementation of tqdm that closely mimics the original tqdm.
-    
+
     Args:
         lst (range): A range object to iterate over.
 
@@ -36,8 +37,7 @@ def ft_tqdm(lst: range):
         elapsed_str = time.strftime("%M:%S", time.gmtime(elapsed_time))
         eta_str = time.strftime("%M:%S", time.gmtime(eta)) if eta > 0 else "00:00"
 
-        # Print the tqdm-like progress bar **only after first iteration**
-        if i > 1:  
+        if i > 1:
             sys.stdout.write(
                 f"\r{progress * 100:3.0f}%|{bar}| {i}/{total} [{elapsed_str}<{eta_str}, {speed:.2f}it/s]"
             )
