@@ -35,7 +35,6 @@ def main():
     """Main function to handle argument validation and Morse Code
     conversion."""
     try:
-        # Ensure exactly one argument is provided
         if len(sys.argv) != 2:
             raise AssertionError("AssertionError: the arguments are bad")
 

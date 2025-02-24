@@ -5,14 +5,13 @@ from ft_filter import ft_filter
 def main():
     """Main function to validate arguments and filter words."""
     try:
-        # Ensure exactly two arguments are passed
         if len(sys.argv) != 3:
             raise AssertionError("AssertionError: the arguments \
 are bad")
 
         S, N = sys.argv[1], sys.argv[2]
+        # (_,S,N) = sys.argv is an another way t do it
 
-        # Ensure the second argument is an integer
         if not N.isdigit():
             raise AssertionError("AssertionError: the arguments are bad")
 
